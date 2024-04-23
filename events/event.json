@@ -1,0 +1,40 @@
+{
+  "awsRegion": "us-west-2",
+  "eventID": "bcc18cc0-7fe5-4cef-aca6-f9e94c2bac0e",
+  "eventName": "INSERT",
+  "userIdentity": null,
+  "recordFormat": "application/json",
+  "tableName": "df-test-table",
+  "dynamodb": {
+    "ApproximateCreationDateTime": 1713817615881872,
+    "Keys": {
+      "first_index": {
+        "S": "4"
+      }
+    },
+    "NewImage": {
+      "first_index": {
+        "S": "4"
+      },
+      "hello": {
+        "S": "world"
+      },
+      "foo": {
+        "S": "bar"
+      },
+      "person": {
+        "M": {
+          "name": {
+            "S": "danny"
+          },
+          "where": {
+            "S": "the code freese"
+          }
+        }
+      }
+    },
+    "SizeBytes": 80,
+    "ApproximateCreationDateTimePrecision": "MICROSECOND"
+  },
+  "eventSource": "aws:dynamodb"
+}
