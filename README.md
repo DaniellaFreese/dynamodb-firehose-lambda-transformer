@@ -13,19 +13,19 @@ This is a quickstart project for creating a Typescript AWS Lambda function that 
 
 This will create a `dist` directory with the transpiled code, and the index.zip file.
 
-2. Create the lambda IAM execution role, navigate to the root directory and execute the following command:
+2. Next, create the lambda IAM execution role, navigate to the `root` directory and execute the following command:
 
     ```console
     aws iam create-role --role-name lambda-role --assume-role-policy-document file://role.json
     ```
 
-3. Next create the lambda function:
+3. Use the aws cli 2 to create the lambda function:
 
     ```console
     aws lambda create-function --function-name dynamodb-firehose-lambda-transformer --runtime "nodejs18.x" --role arn:aws:iam::<your-aws-account-id>:role/lambda-role --zip-file "fileb://dist/index.zip" --timeout 60 --handler index.handler
     ```
 
-4. Next you need to navigate to AWS Firehose, enable the data transformation and select the lambda function you just created.
+4. Last, navigate to AWS Firehose, enable the data transformation and select the lambda function you just created.
 
 ## References
 
